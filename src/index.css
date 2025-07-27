@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.menu a {
+  position: relative;
+  padding: 10px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.main_heading {
+  color: #ff0065;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #ff0065;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menu a:hover::after,
+.menu a.active::after {
+  transform: scaleX(1);
+}
+
+.menu a:hover {
+  color: #ff0065;
+  transition: color 0.3s ease;
+}
+
+.menu-close-button {
+  border: 1px solid #cdced0;
+  border-radius: 50%;
+  padding: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.menu-close-button:hover {
+  background-color: #ff0065;
+  color: white;
+  transform: rotate(90deg);
+}
+
+
+
+.cont {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 25px;
+  border: 2px solid #ff006591;
+  background: white;
+}
+
+
+
+
+
+.mySwiper .swiper-pagination {
+  margin-top: 40px !important;
+  position: relative;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: #ff0065 !important;
+  opacity: 1;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #ff0065 !important;
+  transform: scale(2.1);
+}
+
+
+
+
+
+
+
+
+@keyframes float-smooth {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+.animate-float-smooth {
+  animation: float-smooth 3s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .menu a {
+    border-bottom: 1px solid #e5e7eb;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
